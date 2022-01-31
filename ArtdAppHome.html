@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/web3@0.20.5/dist/web3.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/q.js/1.4.1/q.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/spark-md5/2.0.2/spark-md5.min.js"></script>   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="node_modules/web3/dist/web3.min.js"></script>
+
+        
+        <link rel="stylesheet" href="ArtdAppHomeCSS.css">
+        
+        <script>
+            function openTab(evt, tabName){
+                //Declare all variables
+                var i, tabcontent, tablinks;
+
+                //  Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++){
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++){
+                    tablinks[i].className = tablinks[i].className.replace("active", "");
+                }
+                
+                // Show the current tab, and add an "active" class to the button that opened this task
+                document.getElementById(tabName).style.display = "block";
+                evt.currentTarget.className += "active";
+                }
+        </script>
+
+    </head>
+    <body>
+      
+        <header class="header">
+            <nav class="navbar navbar-expand-lg fixed-top py-3">
+              <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold">DecentralArt</a>
+                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+          
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Wallet Address:</a></li>
+                    <li><div id="account" class="nav-link text-uppercase font-weight-bold" ></div></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
+        </br>
+    </br>
+          <div class="container">
+            <div class="pt-5 text-white">
+              <header class="py-5 mt-5">
+                <h1 class="display-4">DecentralArt</h1>
+                <h3> Revolutionised Decentralised Art Ownership.</h3>
+                <h5> A Blockchain Solution for Art Ownership that Leverages off Smart Contracts and Ethereum's Ecosystem.</h5>
+                <h5 >DecentralArt's Mission is to be, <strong class="font-weight-bold">"The Single Source of Truth"</strong>.</h5>
+                <h5> We Value: Consensus, Provenance, Immutability, Finality & Transparency</h5>
+                <a ><button href="#" class="bn632-hover bn27">Art Gallery</button></a>
+              
+              </br>
+              </br>
+              </br>
+             <div>
+              <img class="mySlides w3-animate-fading" src="Images/The_Japanese_Footbridge_Claude_Monet.jpg" >
+              <img class="mySlides w3-animate-fading" src="Images/The_Church_At_Auvers_Vincent_Van_Gogh.jpg" >
+              <img class="mySlides w3-animate-fading" src="Images/Coronation_Of_Napoleon_Jacques-Louis David.jpg">
+             </div>
+            </br>
+
+             <script>
+              var myIndex = 0;
+              carousel();
+
+              function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 9000);    
+              }
+
+              </script>
+                
+              </header>
+            </br>
+              <h3 class="underline"> Issues we identified within the Art Industry </h3>
+              
+              </br>
+
+              <div>
+                <p class="lead"><strong class="font-weight-bold">1. Intermediaries </strong></p>
+                <p>   - Trading of artworks through intermediaries such as auction houses are significantly expensive as commissions for each sale can go up to 25%.</p> 
+                <p>   - In-Efficiency in Three-Way Communications, alongside long periods of processing time. </p>
+                <p>   - Shady Intermediaries carrying out illicit activities behind closed doors. (E.g. Sale of Stolen Art & Trafficking of Documents)</p>
+                </br>
+                <p class="lead"><strong class="font-weight-bold">2. Scams & Fradulent Activities </strong></p>
+                <p>   - Out of the <strong class="font-weight-bold">$200 Billion</strong> spent within the Art Industry every year, <strong class="font-weight-bold">$6 Billion</strong> are contributed by <strong class="font-weight-bold">illicit and illegal activities</strong></p> 
+                <p>   - Lack of Trust between participants of trade</p>
+              </div>
+            </br>
+          </br>
+        </br>
+        <div class = "artwork-reg-form">
+
+    <script>
+    
+    function calculateMD5Hash(file, bufferSize) {
+    let def = Q.defer();
+
+    let fileReader = new FileReader();
+    let fileSlicer = File.prototype.slice || File.prototype.mozSlice || File.prototype.webkitSlice;
+    let hashAlgorithm = new SparkMD5();
+    let totalParts = Math.ceil(file.size / bufferSize);
+    let currentPart = 0;
+    let startTime = new Date().getTime();
+
+    fileReader.onload = function (e) {
+        currentPart += 1;
+
+        def.notify({
+            currentPart: currentPart,
+            totalParts: totalParts
+        });
+
+        let buffer = e.target.result;
+        hashAlgorithm.appendBinary(buffer);
+
+        if (currentPart < totalParts) {
+            processNextPart();
+            return;
+        }
+
+        def.resolve({
+            hashResult: hashAlgorithm.end(),
+            duration: new Date().getTime() - startTime
+        });
+    };
+
+    fileReader.onerror = function (e) {
+        def.reject(e);
+    };
+
+    function processNextPart() {
+        let start = currentPart * bufferSize;
+        let end = Math.min(start + bufferSize, file.size);
+        fileReader.readAsBinaryString(fileSlicer.call(file, start, end));
+    }
+
+    processNextPart();
+    return def.promise;
+}
+
+function calculate() {
+
+    let input = document.getElementById('file');
+    if (!input.files.length) {
+        return;
+    }
+
+    let file = input.files[0];
+    let bufferSize = Math.pow(1024, 2) * 10; // 10MB
+
+    calculateMD5Hash(file, bufferSize).then(
+        function (HashResult) {
+            // Success
+            const HashEl = document.getElementById('HashCode');
+            HashResult = HashEl
+            HashEl.innerText = HashCode
+            return HashResult;
+            // SEND result TO THE SERVER
+        },
+        function (err) {
+            // There was an error,
+        });
+}
+
+    </script>
+
+          <h1> Register Artwork Form </h1>
+          <form id="Registration">
+              <input type="text" id="ArtOwner" class="input-box" placeholder="Your Wallet Address">
+              <input type="text" id="ArtName" class="input-box" placeholder="Artwork's Name">
+              <input type="text" id="ArtDesc" class="input-box" placeholder="Artwork's Description">
+              <input type="text" id="ArtExhibitHist" class="input-box" placeholder="Artwork's Exhibition History">
+              <input type="text" id="OwnerProv" class="input-box" placeholder="Owner History">
+              <input type="text" id="ArtForm" class="input-box" placeholder="Physical/Digital Form">
+              <li><p style="color: black;">Artowrk's Image: </p> <input style="color: black; margin-left: 100px;" type="file" id="file" accept="image/png, image/jpeg"></li>
+              <li><input type="button" id="ArtImgHash" class="register-btn" value="Generate Image Hash" onclick="calculate();" style="color: black;margin-top: 20px;"/></li><p style="color: black;margin-top: 20px;">Hash Result:</p><li><p id="HashCode" style="color: black;margin-top: 20px;" class="nav-link text-uppercase font-weight-bold"></p></li>
+              <p style="color: black;margin-top: 20px;"><span><input type="checkbox"></span> By registering this Artwork to your Wallet, I Agree to the Terms & Services, and legally declare that all listed information is the truth and only the truth. </p>
+              <hr>
+          </form>
+          <button type="submit" onsubmit="RegisterArtwork();" value="submit" form="Registration" class="register-btn" id="button-register">Register Artwork</button>
+      </div>
+    </br>
+    </br>
+    </br>
+  </br>
+            </div>
+          </div>
+
+        </br>
+      </br>
+    </br>
+    <div class="Listings">
+      <div class="row"><div class="col">
+          <div id=NewArtworks></div>
+    
+      </div></div>
+    </div>
+          
+    <script type="module" src="ArtdAppJS.js"></script>
+    </body>
+
+</html>>

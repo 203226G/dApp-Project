@@ -1,0 +1,273 @@
+.navbar {
+    transition: all 0.4s;
+}
+
+.navbar .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+}
+
+
+/* Change navbar styling on scroll */
+.navbar.active {
+    background: #fff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+    color: #555;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #555;
+}
+
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #fff;
+    }
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: #555;
+    }
+}
+
+.text-small {
+    font-size: 0.9rem !important;
+}
+
+
+body {
+    min-height: 110vh;
+    background-color: #4ca1af;
+    background-image: linear-gradient(135deg, #4ca1af 0%, #c4e0e5 100%);
+}
+
+.values{
+    text-decoration: underline;
+}
+
+.bn632-hover {
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+  .bn632-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+  .bn632-hover:focus {
+    outline: none;
+  }
+  
+  .bn632-hover.bn27 {
+      margin-left: 0px;
+    background-image: linear-gradient(
+      to right,
+      #ed6ea0,
+      #ec8c69,
+      #f7186a,
+      #fbb03b
+    );
+    box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+
+    }
+
+    .button display-right .button display-left{
+        float: center;
+    }
+
+    .mySlides {
+        margin: 0 auto;
+        display: none;
+        height: 550px;
+        width: 900px;
+        background-size: cover;
+    }
+
+    .underline{
+        text-decoration: underline;
+    }
+
+    .SignUpBtn {
+        right: 0;
+        left: 0;
+        display: block;
+        width: 240px;
+        padding: 40px;
+        margin: 0 auto;
+        border: 0;
+        cursor: pointer;
+        border-radius: 2px;
+        transform: translateY(-50%);
+        box-shadow: 0 10px 20px -5px #94a6af;
+        overflow: hidden;
+      }
+      
+      .SignUpBtn:before,
+      .SignUpBtn:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      
+      .SignUpBtn:before {
+        transform: scale(1);
+        background-image: url("https://himalayasingh.github.io/button-hover-effect-1/img/bg.jpg");
+        background-size: cover;
+        transition: 0.3s ease transform;
+        z-index: 1;
+      }
+      
+      .SignUpBtn:after {
+        background-color: #000;
+        opacity: 0.16;
+        z-index: 2;
+      }
+      
+      .SignUpBtn div {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+      }
+      
+      .SignUpBtn div:before,
+      .SignUpBtn div:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        color: #fff;
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        line-height: 1;
+        text-align: center;
+        padding: 25px 0;
+        transition: 0.3s ease all;
+      }
+      
+      .SignUpBtn div:before {
+        content: "Sign UP";
+        letter-spacing: 0;
+        opacity: 1;
+        transform: scale(1);
+      }
+      
+      .SignUpBtn div:after {
+        content: "LET'S START";
+        letter-spacing: -10px;
+        transform: scale(0);
+        opacity: 0;
+      }
+      
+      .SignUpBtn:hover:before {
+        transform: scale(1.3);
+      }
+      
+      .SignUpBtn:hover div:before {
+        letter-spacing: 3px;
+        opacity: 0;
+        transform: scale(4);
+      }
+      
+      .SignUpBtn:hover div:after {
+        letter-spacing: 0;
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .gradient-text {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        text-decoration: underline;
+        
+
+    }
+      
+    .artwork-reg-form{
+      width: 500px;
+      box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+      background: #fff;
+      padding: 20px;
+      margin: 8% auto;
+      text-align: center;
+  }
+  
+  .artwork-reg-form h1{
+  
+      color:#4ca1af;
+      margin-bottom: 30px;
+  
+  }
+  
+  .input-box{
+      border-radius: 20px;
+      padding: 10px;
+      margin:  10px 0;
+      width: 100%;
+      border: 1px solid #4ca1af;
+      outline: none;
+  }
+  
+  button{
+      color: white;
+      width: 100%;
+      padding: 10px;
+      border-radius: 20px;
+      font-size: 15px;
+      margin: 10px 0;
+      border: none;
+      outline: none;
+      cursor: pointer;
+  
+  }
+  
+  .register-btn{
+      background-color: #1c8adb;
+  
+  }
+  
+  .cancel-btn{
+      background-color: #21afde;
+  }
